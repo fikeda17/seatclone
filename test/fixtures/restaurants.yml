@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  tables_per_timeslot: 1
+  address: MyString
+  phone_number: MyString
+  description: MyText
+  picture: MyString
+
+two:
+  name: MyString
+  tables_per_timeslot: 1
+  address: MyString
+  phone_number: MyString
+  description: MyText
+  picture: MyString
