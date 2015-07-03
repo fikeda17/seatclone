@@ -2,7 +2,10 @@ class CreateReservations < ActiveRecord::Migration
   def change
     create_table :reservations do |t|
       t.references :user, index: true, foreign_key: true
-      t.references :timeslot, index: true, foreign_key: true
+      t.references :restaurant, index: true, foreign_key: true
+      t.date :date
+      t.integer :time
+      t.integer :party_size
 
       t.timestamps null: false
     end

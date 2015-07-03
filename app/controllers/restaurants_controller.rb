@@ -5,7 +5,6 @@ class RestaurantsController < ApplicationController
 
   def show
     @restaurant = Restaurant.find(params[:id])
-    @timeslot = Timeslot.new
   end
 
   def new
@@ -19,7 +18,7 @@ class RestaurantsController < ApplicationController
   def create
     @restaurant = Restaurant.new(product_params)
     if @restaurant.save
-      redirect_to restaurant_url
+      redirect_to restaurants_url
     else
       render :new
     end
