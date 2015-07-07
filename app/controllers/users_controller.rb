@@ -1,4 +1,11 @@
 class UsersController < ApplicationController
+  def show
+    unless current_user && current_user.id == params[:id].to_i
+      direct_to :root, :error => 'Cannot view others reservations'
+    end
+      @user = current_user
+    end
+
   def new
     @user = User.new
   end

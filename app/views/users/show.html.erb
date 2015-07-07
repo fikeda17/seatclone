@@ -5,7 +5,7 @@
 			<%= link_to reservation.restaurant.name, reservation.restaurant %>
 			at 
 			<%= nice_datetime reservation.begin_time %>
-			(<%= pluralize(reservation.people, 'person') %>)
+			(<%= (reservation.party_size) %>)
 		</li>
 	<% end %>
 </ul>
