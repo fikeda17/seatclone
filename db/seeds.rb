@@ -6,28 +6,29 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 Restaurant.create!(
-  :name  => "The old church on the coast of White sea",
-  :tables_per_timeslot => "Sergey Ershov",
-  :address => "123 King West",
-  :phone_number => "403 462 1234",
-  :description => "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi vero reiciendis aliquam veritatis sapiente, debitis libero magni autem dolorem quaerat exercitationem iusto sit earum voluptates obcaecati alias dolore tempore molestias?",
-  :picture => "http://bitmakerlabs.s3.amazonaws.com/photogur/house.jpg"
+  :name  => "Canoe",
+  :address => "Toronto-Dominion Centre, 66 Wellington St W, Toronto, ON M5K 1H6",
+  :phone_number => "(416) 364-0054",
+  :description => "Critically acclaimed to be among Canada’s best restaurants, Canoe’s unique location high atop the TD Bank Tower affords a breathtaking view of the city. The design is clean and simple, yet absolutely stylish—a brilliant reflection of this country’s rich, raw environment.",
+  :capacity => "215",
+  :picture => "http://blog.weddingful.com/wp-content/uploads/2014/07/Canoe.jpg",
 )
 
 Restaurant.create!(
-  :name  => "The old church on the coast of White sea",
-  :tables_per_timeslot => "Sergey Ershov",
-  :address => "127 Bloor West",
-  :phone_number => "403 462 1234",
-  :description => "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis reprehenderit necessitatibus vel sapiente, laborum nisi iste, architecto repellendus natus quos quia temporibus maxime at culpa provident, dolore autem vitae illo.",
-  :picture => "http://bitmakerlabs.s3.amazonaws.com/photogur/house.jpg"
+  :name  => "Origin Restaurant and Bar",
+  :address => "107 King St East, Toronto, ON M5C 1G6",
+  :phone_number => "(416) 603-8009",
+  :description => "Located in the historic downtown Toronto neighbourhood of St. Lawrence, Origin Restaurant & Bar is a high energy global food bar that celebrates the diverse cuisines of the world.",
+  :capacity => "150",
+  :picture => "http://www.blogto.com/listings/restaurants/upload/2010/12/20101209-Origin-Bar.jpg",
 )
 
 Restaurant.create!(
-  :name  => "The old church on the coast of White sea",
-  :tables_per_timeslot => "Sergey Ershov",
-  :address => "129 Yorkville Road",
-  :phone_number => "403 462 1234",
-  :description => "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias neque natus sunt numquam nostrum, doloremque blanditiis facere excepturi asperiores sint similique ea eligendi sed quaerat, quo, libero omnis id dolores!",
-  :picture => "http://bitmakerlabs.s3.amazonaws.com/photogur/house.jpg"
+  :name  => "Buca Italian",
+  :address => "604 King St W, Toronto, ON M5V 1M6",
+  :phone_number => "(416) 865-1600",
+  :description => "Rustic Italian fare, including house made pastas & charcuterie, served in an upscale setting. A Beautiful main dining room with soaring high ceilings, exposed brick greets diners.",
+  :capacity => "117",
+  :picture => "http://www.thestar.com/content/dam/thestar/life/food_wine/2009/11/12/wait_staff_does_buca_no_service/buca.jpeg",
 )
+

@@ -1,20 +1,21 @@
 class SessionsController < ApplicationController
-  def new
-  end
-
   def create
-  	user = User.find_by(email: params[:email])
-  	 if user && user.authenticate(params[:password])
-  		 sessions[:user_id] = user_id
-  		 redirect_to restaurants_url, :notice => "Logged in!"
+  	 user = User.where(:email => params[:email]).first
+  	 if user && user.authenticate(params[:password_digest])
+  		    self.current_user = user
+  		    redirect_to root_path, notice: "Welcome #{user.name}"
   	 else 
-  	 	flash.new[:alert] = "Invalid email or password"
-  	 	render "new"
+  	 	redirect_to new_session_path, alert: "Invalid email or password"
   	 end
   end
 
   def destroy
-  	session[:user_id] = nil
-  	redirect_to restaurants_url, :notice -> "Logged out!"
+    self.current_user = nil
+  	redirect_to root_path, notice: "You are now logged out #{user.name}"
   end
+
+  def new
+  end
+
+
 end

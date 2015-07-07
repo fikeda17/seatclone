@@ -1,7 +1,12 @@
-<h1>Restaurants!</h1>
-<%= link_to "Add New Restaurant", "/restaurants/new" %>
+<h1>All Restaurants!</h1>
 
+<section class = "restaurant"
 <% @restaurants.each do |restaurant| %>
   <p><%= restaurant.name %>, <%= restaurant.description %></p>
   <%= link_to image_tag(restaurant.picture), "/restaurants/#{restaurant.id}" %>
+</section>
+<% end %>
+
+<% if current_user %>
+	<%= link_to "Add New Restaurant", "/restaurants/new" %>
 <% end %>

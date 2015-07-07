@@ -1,19 +1,14 @@
 Rails.application.routes.draw do
 
-  get 'sessions/new'
+  root to: 'home#home'
 
-  get 'sessions/create'
+  resources :restaurants do 
+    resources :reservations, only: :create
+  end
 
-  get 'sessions/destroy'
+  resources :sessions, only: [:create, :destroy, :new]
 
-  resources :timeslots
-
-  resources :users
-
-  resources :reservations
-
-  resources :restaurants
-  
+  resources :users, only: [:show, :new, :create]
 
 
   # The priority is based upon order of creation: first created -> highest priority.

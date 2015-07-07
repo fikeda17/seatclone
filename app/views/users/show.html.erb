@@ -1,2 +1,11 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<h1>My Reservations</h1>
+<ul>
+	<% @user.reservations.each do |reservation| %>
+		<li>
+			<%= link_to reservation.restaurant.name, reservation.restaurant %>
+			at 
+			<%= nice_datetime reservation.begin_time %>
+			(<%= pluralize(reservation.people, 'person') %>)
+		</li>
+	<% end %>
+</ul>
